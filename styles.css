@@ -31,12 +31,26 @@ html{
 
 body{
     font-family:Arial, Helvetica, sans-serif;
-
-    background:var(--bg);
-
-    color:var(--text)   ;
-
+    background: radial-gradient(circle at top, rgba(145, 69, 255, 0.12), transparent 28%),
+                linear-gradient(180deg, #121114 0%, #18171f 100%);
+    color:var(--text);
     overflow-x:hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
 }
 
 /* ==========================================
@@ -50,6 +64,14 @@ header{
             rgba(18, 18, 18, 0.95),
             rgba(28, 20, 38, 0.9)
         );
+    padding: 0 20px;
+}
+
+.header-inner {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+    display: grid;
+    gap: 48px;
 }
 
 
@@ -58,15 +80,10 @@ header{
 ========================================== */
 
 .top-bar{
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
-    padding:25px 70px;
-
+    padding:25px 0;
 }
 
 
@@ -114,37 +131,25 @@ header{
 ========================================== */
 
 .navigation{
-
     display:flex;
-
     align-items:center;
-
+    gap: 12px;
 }
 
 .navigation a{
-
     text-decoration:none;
-
     color:white;
-
-    padding:0 25px;
-
+    padding:0 20px;
     font-size:17px;
-
     transition:.3s;
-
 }
 
 .navigation a:not(:last-child){
-
     border-right:1px solid rgba(255,255,255,.18);
-
 }
 
 .navigation a:hover{
-
     color:#d9c3ff;
-
 }
 
 
@@ -153,17 +158,13 @@ header{
 ========================================== */
 
 .hero{
-
     display:grid;
-
     grid-template-columns:1fr 500px;
-
     align-items:center;
-
     gap:60px;
-
-    padding:70px;
-
+    padding:70px 0 40px;
+    width: min(1120px, 100%);
+    margin: 0 auto;
 }
 
 
@@ -194,35 +195,22 @@ header{
 
 
 .hero-text h1{
-
     font-size:72px;
-
-    line-height:1;
-
+    line-height:1.02;
     letter-spacing:-2px;
-
+    max-width: 740px;
 }
-
 
 .profession{
-
     font-size:24px;
-
     color:#d6d6d6;
-
 }
 
-
 .description{
-
     font-size:20px;
-
     color:#c9c9c9;
-
-    max-width:650px;
-
+    max-width:680px;
     line-height:1.7;
-
 }
 
 
@@ -239,17 +227,14 @@ header{
 }
 
 .hero-buttons a{
-
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     text-decoration:none;
-
     color:white;
-
     padding:15px 32px;
-
     border-radius:14px;
-
     transition:.35s;
-
 }
 
 
@@ -339,25 +324,15 @@ header{
 /* фотография */
 
 .hero-photo img{
-
     width:600px;
-
-    height:600px;
-
-    object-fit:cover;
-
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     border-radius:50%;
-
     border:5px solid rgba(255,255,255,.08);
-
-    box-shadow:
-
-    0 25px 80px rgba(0,0,0,.45);
-
+    box-shadow: 0 25px 80px rgba(0,0,0,.45);
     transition:.4s;
-
 }
-
 .hero-photo img:hover{
 
     transform:scale(1.03);
@@ -406,11 +381,12 @@ header{
     }
 
     .navigation{
-
         flex-wrap:wrap;
-
         justify-content:center;
+    }
 
+    .navigation a:not(:last-child){
+        border-right: none;
     }
 
     .hero-photo{
@@ -622,6 +598,12 @@ form {
     gap: 18px;
 }
 
+form label {
+    color: #dcd6e2;
+    font-size: 15px;
+    font-weight: 600;
+}
+
 form input,
 form textarea {
     width: 100%;
@@ -631,6 +613,10 @@ form textarea {
     background: rgba(255, 255, 255, 0.06);
     color: #fff;
     resize: vertical;
+}
+
+form textarea {
+    min-height: 160px;
 }
 
 form button {
