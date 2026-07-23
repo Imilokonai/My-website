@@ -74,6 +74,66 @@ header{
     gap: 48px;
 }
 
+.container {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.content-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 20px 40px;
+}
+
+.content-page h1 {
+    font-size: 42px;
+    margin-bottom: 18px;
+    color: #e7dae9;
+}
+
+.content-page h2 {
+    margin-top: 40px;
+    font-size: 28px;
+    color: #f1e7ff;
+}
+
+.content-page p,
+.content-page li {
+    font-size: 18px;
+    color: #c9c9c9;
+    line-height: 1.8;
+}
+
+.content-page ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: grid;
+    gap: 12px;
+}
+
+.content-page ul li::before {
+    content: "•";
+    color: #c13dd5;
+    margin-right: 10px;
+}
+
+.content-page section {
+    padding: 24px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 24px;
+}
+
+.content-page a {
+    color: #c13dd5;
+}
+
+.content-page a:hover {
+    color: #d9c3ff;
+}
 
 /* ==========================================
               TOP BAR
@@ -411,7 +471,7 @@ header{
 
 main {
     margin: 0 auto;
-    padding: 80px 70px 40px;
+    padding: 80px 20px 40px;
 }
 
 h2 {
@@ -604,6 +664,37 @@ form label {
     font-weight: 600;
 }
 
+.privacy-consent {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #dcd6e2;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #c13dd5;
+    margin: 0;
+}
+
+.checkbox-label a {
+    color: #c13dd5;
+}
+
+.checkbox-label a:hover {
+    color: #d9c3ff;
+}
+
 form input,
 form textarea {
     width: 100%;
@@ -647,6 +738,14 @@ footer section {
 }
 
 @media (max-width: 1100px) {
+    main {
+        padding: 60px 18px 30px;
+    }
+
+    .content-page {
+        padding: 70px 15px 30px;
+    }
+
     .hero {
         grid-template-columns: 1fr;
         text-align: center;
