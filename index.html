@@ -67,45 +67,109 @@
 
 </header>
 
-        <main>
-            <section id="about" class="info">
-                <h2>О себе</h2>
-                <p>
-                    Я студентка направления “Информационные системы и программирование”.
-                    Занимаюсь веб-разработкой больше года, собираю и публикую проекты на GitHub.
-
-                    Работаю с HTML, CSS, JavaScript, базово C. Понимаю UI/UX и стараюсь делать интерфейсы, которые не выглядят как “учебная работа”.
-
-                    Дополнительно пробую себя в монтаже и цифровом дизайне.
-                </p>
-            </section>
-
-            <section id="skills">
-
-            <h2>Навыки</h2>
-
-            <ul>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript</li>
-                <li>Git</li>
-                <li>GitHub</li>
-                <li>UI/UX</li>
-            </ul>
-
-            </section>
-
-            <section id="projects">
-                <h2>Мои проекты</h2>
-                <div class="project">
-                    <h3>Проект 1</h3>
-                    <img src="images/project1.jpg" alt="Проект 1">
-                    <p>Описание проекта 1.</p>
+        <main class="container">
+            <section id="about" class="info info-grid">
+                <div class="info-text">
+                    <h2>О себе</h2>
+                    <p>
+                        Я студентка направления “Информационные системы и программирование”.
+                        Занимаюсь веб-разработкой больше года, собираю и публикую проекты на GitHub.
+                    </p>
+                    <p>
+                        Работаю с HTML, CSS, JavaScript, базово C. Понимаю UI/UX и стараюсь делать интерфейсы,
+                        которые не выглядят как “учебная работа”. Дополнительно пробую себя в монтаже и цифровом дизайне.
+                    </p>
+                </div>
+                <div class="info-cards">
+                    <div class="info-card">
+                        <span>1+</span>
+                        <p>год опыта</p>
+                    </div>
+                    <div class="info-card">
+                        <span>3+</span>
+                        <p>реализованных проектов</p>
+                    </div>
+                    <div class="info-card">
+                        <span>UI/UX</span>
+                        <p>практический дизайн</p>
+                    </div>
                 </div>
             </section>
 
-            <section id="contacts">
-                <h2>Написать мне</h2>
+            <section id="skills" class="skills-section">
+                <h2>Навыки</h2>
+                <ul class="skills-list">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>Git</li>
+                    <li>GitHub</li>
+                    <li>UI/UX</li>
+                </ul>
+            </section>
+
+            <section id="projects" class="projects-section">
+                <h2>Последние проекты</h2>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-preview"></div>
+                        <h3>Проект 1</h3>
+                        <p>Современная посадочная страница для мобильного приложения.</p>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-preview"></div>
+                        <h3>Проект 2</h3>
+                        <p>Интерфейс для маркетплейса с удобной навигацией и фильтрами.</p>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-preview"></div>
+                        <h3>Проект 3</h3>
+                        <p>Дашборд для аналитики с современным визуальным стилем.</p>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-preview"></div>
+                        <h3>Проект 4</h3>
+                        <p>Сайт услуг с адаптивной сеткой и акцентом на конверсию.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="services-section">
+                <h2>Мои услуги</h2>
+                <div class="services-grid">
+                    <div class="service-visual">
+                        <img src="images/web-img.jpg" alt="Рабочий процесс">
+                    </div>
+                    <div class="service-list">
+                        <article class="service-card">
+                            <h3>UX/UI дизайн</h3>
+                            <p>Разработка удобных интерфейсов с проработанным пользовательским опытом.</p>
+                        </article>
+                        <article class="service-card">
+                            <h3>Вёрстка</h3>
+                            <p>Чистый адаптивный HTML/CSS код, готовый к дальнейшей интеграции.</p>
+                        </article>
+                        <article class="service-card">
+                            <h3>Оптимизация сайта</h3>
+                            <p>Повышение скорости загрузки и удобства работы на любых устройствах.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="review-section">
+                <h2>Отзывы клиентов</h2>
+                <div class="review-card">
+                    <p>“Отличная работа: быстро, внимательно к деталям и с красивым адаптивным интерфейсом.”</p>
+                    <span>Пример оформления отзыва</span>
+                </div>
+            </section>
+
+            <section id="contacts" class="contact-section">
+                <div class="contact-copy">
+                    <h2>Написать мне</h2>
+                    <p>Готова обсудить ваш проект и помочь с созданием красивого, понятного и адаптивного сайта.</p>
+                </div>
                 <form action="https://formspree.io/f/mnqvkwqv" method="POST">
                     <label for="name">Имя:</label>
                     <input type="text" id="name" name="name" required>
@@ -116,17 +180,37 @@
                     <label for="message">Сообщение:</label>
                     <textarea id="message" name="message" required></textarea>
 
+                    <div class="privacy-consent">
+                        <input type="checkbox" id="privacy" required>
+
+                        <label for="privacy">
+                            Я ознакомился(ась) с
+                            <a href="privacy.html" target="_blank">
+                            Политикой конфиденциальности
+                            </a>
+                            и даю согласие на обработку персональных данных.
+                        </label>
+                    </div>
+
                     <button type="submit">Отправить</button>
-                
+                </form>
             </section>
         </main>
-        
+
         <footer>
-            <section>
-                <h2>Контакты</h2>
-                <a href="https://github.com/Imilokonai" target="_blank">GitHub</a>
-                <a href="https://t.me/imilokonai" target="_blank">Telegram</a>
-            </section>
+<section>
+    <h2>Контакты</h2>
+
+    <div class="socials">
+        <a href="https://github.com/Imilokonai" target="_blank">
+            <img id="gh" src="images/github.svg" alt="GitHub">
+        </a>
+
+        <a href="https://t.me/imilokonai" target="_blank">
+            <img id="tg" src="" alt="Telegram">
+        </a>
+    </div>
+</section>
             <section>
                 <h2>Навигация</h2>
                 <a href="#about">О себе</a>
